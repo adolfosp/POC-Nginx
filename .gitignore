@@ -1,0 +1,4 @@
+logs
+api/node_modules
+fail2ban/db
+fail2ban/action.d
