@@ -4,6 +4,14 @@ services:
     container_name: mini-api
     expose:
       - "3000"
+    deploy:
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: 256M
+        reservations:
+          cpus: "0.25"
+          memory: 128M
 
   proxy:
     image: nginx:latest
@@ -15,6 +23,14 @@ services:
       - ./logs:/var/log/nginx
     depends_on:
       - api
+    deploy:
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: 256M
+        reservations:
+          cpus: "0.25"
+          memory: 128M
 
   fail2ban:
     image: crazymax/fail2ban:latest
@@ -24,5 +40,5 @@ services:
       - NET_RAW
     volumes:
       - ./logs:/var/log/nginx:ro
-      - ./fail2ban:/data          
+      - ./fail2ban:/data
     restart: always
