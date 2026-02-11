@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const port = 3000;
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 // endpoint raiz - consome muita CPU e memória
 app.get("/", (req, res) => {
@@ -36,13 +37,15 @@ app.get("/ping", (req, res) => {
 });
 
 // endpoint que simula erro 104 (reset da conexão)
-app.get("/reset", (req, res) => {
-  console.log("Forçando reset da conexão no /reset");
+app.get("/reset", async (req, res) => {
+  console.log("Esperando 2 segundos...");
+  
+  await delay(20000);
 
-  // força reset TCP enviando RST
-  req.socket.destroy(new Error("Connection reset by peer"));
-  // não envia resposta
+  console.log("Fechando socket");
+  req.socket.destroy();
 });
+
 
 app.listen(port, "0.0.0.0", () => {
   console.log(`API running at http://0.0.0.0:${port}`);

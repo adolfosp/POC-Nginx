@@ -1,0 +1,13 @@
+D:\Repositories\POC-Nginx\POC-API-Error104\bin\Debug\POC-API-Error104.deps.json
+D:\Repositories\POC-Nginx\POC-API-Error104\bin\Debug\POC-API-Error104.runtimeconfig.json
+D:\Repositories\POC-Nginx\POC-API-Error104\bin\Debug\appsettings.Development.json
+D:\Repositories\POC-Nginx\POC-API-Error104\bin\Debug\appsettings.json
+D:\Repositories\POC-Nginx\POC-API-Error104\bin\Debug\POC-API-Error104.staticwebassets.endpoints.json
+D:\Repositories\POC-Nginx\POC-API-Error104\bin\Debug\POC-API-Error104.exe
+D:\Repositories\POC-Nginx\POC-API-Error104\bin\Debug\POC-API-Error104.dll
+D:\Repositories\POC-Nginx\POC-API-Error104\bin\Debug\Microsoft.AspNetCore.OpenApi.dll
+D:\Repositories\POC-Nginx\POC-API-Error104\bin\Debug\Microsoft.OpenApi.dll
+D:\Repositories\POC-Nginx\POC-API-Error104\bin\Debug\POC-API-Error104.pdb
+D:\Repositories\POC-Nginx\POC-API-Error104\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
+D:\Repositories\POC-Nginx\POC-API-Error104\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
+D:\Repositories\POC-Nginx\POC-API-Error104\obj\Debug\docker-c.35A3FFBA.Up2Date

@@ -1,0 +1,6 @@
+services:
+  poc-api-error104:
+    image: ${DOCKER_REGISTRY-}pocapierror104
+    build:
+      context: .
+      dockerfile: POC-API-Error104/Dockerfile

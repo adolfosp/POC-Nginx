@@ -24,7 +24,7 @@ for i in {1..20}; do curl -s -o /dev/null -w "%{http_code}\n" http://localhost:8
 ### 4 - failed (104: Connection reset by peer)
 
 ```bash
-curl -v http://localhost:3000/reset
+curl -v http://localhost:8089/reset
 
 ```
 

@@ -7,22 +7,42 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.50"
+          cpus: "0.20"
           memory: 256M
         reservations:
           cpus: "0.25"
           memory: 128M
 
+  # dotnet-api:
+  #   build:
+  #     context: ./POC-API-Error104/POC-API-Error104
+  #     dockerfile: Dockerfile
+  #   container_name: dotnet-api
+  #   expose:
+  #     - "8080"
+  #   environment:
+  #     - ASPNETCORE_URLS=http://+:8080
+  #     - ASPNETCORE_ENVIRONMENT=Development
+  #   deploy:
+  #     resources:
+  #       limits:
+  #         cpus: "0.30"
+  #         memory: 256M
+  #       reservations:
+  #         cpus: "0.20"
+  #         memory: 128M
+
   proxy:
     image: nginx:latest
     container_name: nginx-proxy
     ports:
-      - "8080:80"
+      - "8089:80"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
       - ./logs:/var/log/nginx
     depends_on:
       - api
+      # - dotnet-api
     deploy:
       resources:
         limits:

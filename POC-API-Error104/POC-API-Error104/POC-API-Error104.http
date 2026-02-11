@@ -1,0 +1,6 @@
+@POC_API_Error104_HostAddress = http://localhost:5205
+
+GET {{POC_API_Error104_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
